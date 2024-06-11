@@ -1,0 +1,18 @@
+<h1> We found <%= @sites.size %> tourists sites <%= @searched_sites %> </h1>
+
+<% @sites.each do |site|%>
+  <section class="tourist_site">
+    <p class="name">
+      <%= site[:formatted] %>
+    </p>
+
+     <p class="address">
+      <%= site[:address_line1] %>
+    </p>
+
+     <p class="place_id">
+      <%= site[:place_id] %>
+    </p>
+  </section> 
+  <% end %>
+
